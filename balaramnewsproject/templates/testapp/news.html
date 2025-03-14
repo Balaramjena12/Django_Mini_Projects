@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Balaram News Channel Portal</title>
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+  </head>
+  <body>
+    <h1>{{head_msg}}</h1>
+    <ul>
+      <li>{{sub_msg1}}</li>
+      <li>{{sub_msg2}}</li>
+      <li>{{sub_msg3}}</li>
+      {% if type == 'movies' %}
+      <img src="{% static 'images/image-1.jpg' %}" alt="">
+      <img src="{% static 'images/image-2.jpg' %}" alt="">
+      <img src="{% static 'images/image-3.jpg' %}" alt="">
+      {% elif type == 'sports' %}
+      <img src="{% static 'images/image-4.jpg' %}" alt="">
+      <img src="{% static 'images/image-5.jpg' %}" alt="">
+      <img src="{% static 'images/image-6.jpg' %}" alt="">
+      {% elif type == 'politics' %}
+      <img src="{% static 'images/image-7.jpg' %}" alt="">
+      <img src="{% static 'images/image-8.jpg' %}" alt="">
+      <img src="{% static 'images/image-9.jpg' %}" alt="">
+      {% endif %}
+    </ul>
+  </body>
+</html>
